@@ -4,12 +4,14 @@ import { useSelector } from 'react-redux';
 
 export default function Header() {
   const { currentUser } = useSelector((state) => state.user);
+  console.log(currentUser.avatar);
   return (
+    
     <header className="bg-slate-200 shadow-md">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to="/">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
-            <span className="text-slate-500">Real</span>
+            <span className="text-slate-500">Real</span>    
             <span className="text-slate-700">Estate</span>
           </h1>
         </Link>
@@ -39,6 +41,7 @@ export default function Header() {
                 src={currentUser.avatar}
                 alt='profile'
               />
+              
             ) : (
               <li className=' text-slate-700 hover:underline'> Sign in</li>
             )}
@@ -47,4 +50,5 @@ export default function Header() {
       </div>
     </header>
   );
+  
 }
