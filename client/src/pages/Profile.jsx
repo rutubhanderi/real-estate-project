@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import {app} from '../firebase';
 import {updateUserStart, updateUserSuccess, updateUserFailure} from '../redux/user/userSlice';
+import { useState } from "react";
 
 export default function Profile() {
   //const fileRef = useRef(null);
